@@ -33,10 +33,10 @@ public:
 		if(cols != B.rows)
 			throw(std::invalid_argument("Matrices can not be multiplied"));
         Matrix result(rows, B.cols);
-		for(int i = 0; i < rows; i++)// pra cada linha de A
-        	for (int j = 0; j < B.cols; j++) {// pra cada coluna de B
+		for(int i = 0; i < rows; i++)// For each row of A
+        	for (int j = 0; j < B.cols; j++) {// Each col of B
             int sum = 0;
-            for (int k = 0; k < B.rows; k++){// para cada linha de B
+            for (int k = 0; k < B.rows; k++){// Each row of B
                 sum += data[i][k] * B.data[k][j];
             }
             result.data[i][j] = sum;
